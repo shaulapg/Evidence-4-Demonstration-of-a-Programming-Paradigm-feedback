@@ -66,3 +66,15 @@ main()
 #r: 50
 #p: 49.85
 #Max expected profit: 7.10178453
+
+#r: 100
+#p: 10.3
+#Max expected profit: 0.11482720
+
+#r: 94
+#p: 12.45
+#Max expected profit: 0.07197000
+
+#r: 80
+#p: 39.74
+#Max expected profit: 0.33154559
