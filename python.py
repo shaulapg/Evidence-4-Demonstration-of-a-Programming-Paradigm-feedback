@@ -8,8 +8,8 @@ def solve(win, loss):
     x = math.pow(factor, loss)
     y = math.pow(factor, win + loss)
 
-    p_loss = (x - y) / (1 - y)
     p_win = (1 - x) / (1 - y)
+    p_loss = 1 - p_win
 
     return -p_loss * loss * (1 - refund) + p_win * win
 
