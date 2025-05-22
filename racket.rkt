@@ -42,5 +42,17 @@
   
   (unbox best))
 
+(max-expected-profit 0 49.9)
+;output: 0.00000000
+
 (max-expected-profit 50 49.85)
 ;output: 7.101784529895273
+
+(max-expected-profit 100 10.3)
+;output: 0.11482720
+
+(max-expected-profit 94 12.45)
+;output: 0.07197000
+
+(max-expected-profit 80 39.74)
+;output: 0.33154559
