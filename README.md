@@ -33,6 +33,7 @@ For each test case, display the maximum expected profit with an absolute error o
 # Diagram and Explanation
 
 ![alt text](E4.drawio.png)
+
 Here the results are based on the users input.
 
 In the code, first we need a function to calculate the loss/win probability and return the profit, based on the output of the user. We need to use Gambler's ruin formulas to do this (n1 = loss  and n2 = win). The loss and win are the values we are going to use, one by one, starting on 1 for both values (we will understand how the values are going to increase later). After the first part, we have the probabilities, but that's not enough for our problem. The expected profit for the case will be determined by our second formula, which we will adapt to our specific case, taking into account not only the probabilities of winning/losing and its respective wins/loses, but also the returned amount based on the loss.
@@ -63,3 +64,6 @@ The first one because I think it is an eassier language for coding and debugging
 
 On the other hand, I some reasons for using Racket are: it makes the mathematical reasoning very clear, also it can work with exact fractions.
 
+# References
+
+Wikipedia contributors. (2025, 21 mayo). Gambler’s ruin. Wikipedia. https://en.wikipedia.org/wiki/Gambler%27s_ruin
