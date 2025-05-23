@@ -5,8 +5,8 @@
   (define x (expt factor loss))
   (define y (expt factor (+ win loss)))
 
-  (define pLoss (/ (- x y) (- 1 y)))
   (define pWin (/ (- 1 x) (- 1 y)))
+  (define pLoss (- 1 pWin))
 
   (+ (* pWin win)
      (* -1 pLoss loss (- 1 refund))))
