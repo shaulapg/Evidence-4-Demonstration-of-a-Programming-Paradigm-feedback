@@ -1,4 +1,4 @@
-Every example uses the formula explain in the README
+Every example uses the formula explained in the README. This shows the process by calculating the profit using the wins and losses in each case and comparing it to the last best profit. If not, it adds one to the win or loss deppending on the previous failed cases.
 
 # Examples
 
