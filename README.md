@@ -58,11 +58,11 @@ Space complexity: O(1). As there is no recursion, nor scalar values.
 
 # Paradigm
 
-I used prolog and racket.
+I used prolog (logic) and racket (functional).
 
-The first one because I think it is an eassier language for coding and debugging, it also has libraries such as math which helps with the calculations, plus it is eassier to read.
+Racket is far more suitable for numerical calculations, explicit control structures (like loops), and algorithmic logic such as optimizing profits. Prolog excels in declarative logic and symbolic reasoning, but in this case, it would be more of a limitation than a benefit.
 
-On the other hand, I some reasons for using Racket are: it makes the mathematical reasoning very clear, also it can work with exact fractions.
+Racket gives explicit control over loops, recursion, and conditions. This is useful for nested while loops and step-by-step optimization logic.
 
 # References
 
