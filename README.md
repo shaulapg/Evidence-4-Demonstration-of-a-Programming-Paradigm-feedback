@@ -34,15 +34,15 @@ For each test case, display the maximum expected profit with an absolute error o
 
 ![alt text](E4.drawio.png)
 
-Here the results are based on the users input.
+Here, the results are based on the user's input.
 
-In the code, first we need a function to calculate the loss/win probability and return the profit, based on the output of the user. We need to use Gambler's ruin formulas to do this (n1 = loss  and n2 = win). The loss and win are the values we are going to use, one by one, starting on 1 for both values (we will understand how the values are going to increase later). After the first part, we have the probabilities, but that's not enough for our problem. The expected profit for the case will be determined by our second formula, which we will adapt to our specific case, taking into account not only the probabilities of winning/losing and its respective wins/loses, but also the returned amount based on the loss.
+In the code, we first need a function to calculate the loss/win probability and return the profit based on the user's input. We need to use Gambler's Ruin formulas to do this (n1 = loss and n2 = win). The loss and win are the values we are going to use, one by one, starting at 1 for both values (we will explain how these values increase later). After the first part, we have the probabilities, but that's not enough for our problem. The expected profit for the case will be determined by our second formula, which we will adapt to our specific case, taking into account not only the probabilities of winning/losing and their respective win/loss values, but also the returned amount based on the loss.
 
-Now we are going to initialize the best_win and loses with a value of 1 and the best (best profit currently) with a 0.
+Now, we are going to initialize best_win and loses with a value of 1, and best (the best profit currently) with 0.
 
-For our first *while*, whichn will be broken if prev is 0 from the begining of a loop we are going to declare prev (previous profit) as 0 (it will help us not only to start, but it will prevent an infinite loop if the next while is broken by breaking its own while if the max has been reached) and the wins as the best_win (first is 1, but moving forward is going to help us return to the previous win if the next while is broken).
+For our first while loop, which will break if prev is 0 at the beginning of the loop, we are going to declare prev (previous profit) as 0. This will help us not only to start, but also to prevent an infinite loop if the next while is broken—by breaking its own while loop if the max has been reached. We also set wins to best_win (which is initially 1, but later helps us revert to the previous win if the next while is broken).
 
-For the next *while*, which is going to be inside the previous *while*. First we are going to calculate the profit based on the current wins and losses if the profit is greater than the best profit, then it is going to replace it and the current win is going to be the best_win, and we prepare for the next loop by redeclaring prev and adding one more win. If not, then the while will end and we will return to the previous one, and if the previous win and loss convo was greater, then we finish everything, as we already reached the maximum and return the current best.
+Next, we have another while loop inside the previous one. First, we calculate the profit based on the current wins and losses. If the profit is greater than the current best profit, then it replaces it, the current win becomes best_win, and we prepare for the next loop by redeclaring prev and increasing the win by one. If not, then the loop ends, and we return to the outer loop. If the previous win/loss combination was better, we finish everything, as we have already reached the maximum, and return the current best.
 
 # Tests
 
@@ -50,7 +50,7 @@ the tests are written inside each file (python and racket), and the explanation 
 
 # Complexity
 
-The complexities are the same, as is the same code but in different languages:
+The complexities are the same, as is the same code but in different languages (to use different paradigms):
 
 Time complexity: O(n * m) → this is because the code depends on the wins and losses, because I used nested loops over these two.
 
@@ -58,7 +58,7 @@ Space complexity: O(1). As there is no recursion, nor scalar values.
 
 # Paradigm
 
-I used python and racket.
+I used prolog and racket.
 
 The first one because I think it is an eassier language for coding and debugging, it also has libraries such as math which helps with the calculations, plus it is eassier to read.
 
